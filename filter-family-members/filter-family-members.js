@@ -39,18 +39,30 @@
 //     }
 //   ]
 // };
-//
+
 // var livesInBerkeley = function (familyMember) {
 //   return familyMember.location === 'Berkeley';
 // }
-//
+
 // filterFamilyMembers(familyTree, livesInBerkeley)
-//
+
 // returns ['Beth Jr. Johnson', 'Joshie Wyattson'];
 
+var firstNameBeth = function(familyMember){
+	
+		var bethList =[];
+	if(familyMember.firstName ===  'Beth' ){
+		bethList.push(familyMember);
+		if(familyMember.children.length > 0)
+		familyMember.children.forEach(element => firstNameBeth(element));
 
+	}
+	return bethList;
+}
 
-var filterFamilyMembers = function (familyTree, truthTest) {
+var filterFamilyMembers = function (familyTree, firstNameBeth) {
   // All your code in this function body
+  	
+
 };
 
